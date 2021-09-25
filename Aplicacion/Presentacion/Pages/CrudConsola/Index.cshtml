@@ -1,0 +1,78 @@
+@page
+@model Presentacion.Pages.CrudConsola.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].Version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].Fabricante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].Almacenamiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].TipoAlmacenamiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].VelocidadRam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].VelocidadProcesador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consola[0].Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Consola) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fabricante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Almacenamiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoAlmacenamiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VelocidadRam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VelocidadProcesador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
