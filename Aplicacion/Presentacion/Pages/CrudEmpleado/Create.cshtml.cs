@@ -21,6 +21,7 @@ namespace Presentacion.Pages.CrudEmpleado
             _context = context;
         }
 
+        //Comentario de prueba de clase
         public IActionResult OnGet()
         {
             List<Sucursal> listaSucursales = _context.Sucursal.ToList();
