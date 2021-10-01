@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj": {}
+    "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\Propietario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Propietario\\AppData\\Roaming\\NuGet\\NuGet.Config"

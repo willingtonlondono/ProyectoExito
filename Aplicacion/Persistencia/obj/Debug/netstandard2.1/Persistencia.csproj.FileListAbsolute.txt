@@ -10,3 +10,15 @@ C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Persistencia\bin\Debug
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CopyComplete
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.dll
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.pdb
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.deps.json
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.dll
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Persistencia.pdb
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Dominio.dll
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\bin\Debug\netstandard2.1\Dominio.pdb
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csprojAssemblyReference.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.AssemblyInfoInputs.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.AssemblyInfo.cs
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.csproj.CopyComplete
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.dll
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Persistencia\obj\Debug\netstandard2.1\Persistencia.pdb

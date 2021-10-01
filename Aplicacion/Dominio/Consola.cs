@@ -16,6 +16,8 @@ namespace Dominio
 
         public int VelocidadProcesador {get; set;}
 
+        public string Fabricante {get; set;}
+
         public double Precio {get; set;}
 
     }

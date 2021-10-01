@@ -7,3 +7,12 @@ C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Dominio\bin\Debug\nets
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.dll
 C:\Users\Propietario\Documents\ProyectoGrupo61\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.csprojAssemblyReference.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.dll
+C:\Users\Propietario\Documents\RepoGit\ProyectoExito\Aplicacion\Dominio\obj\Debug\netstandard2.0\Dominio.pdb

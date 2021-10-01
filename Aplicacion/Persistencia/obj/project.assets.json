@@ -7268,11 +7268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Persistencia\\Persistencia.csproj",
+      "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Persistencia\\Persistencia.csproj",
       "packagesPath": "C:\\Users\\Propietario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Persistencia\\obj\\",
+      "outputPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Propietario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7286,8 +7286,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj"
             }
           }
         }

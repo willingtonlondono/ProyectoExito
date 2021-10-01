@@ -8605,11 +8605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Presentacion\\Presentacion.csproj",
+      "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Presentacion\\Presentacion.csproj",
       "packagesPath": "C:\\Users\\Propietario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Presentacion\\obj\\",
+      "outputPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Propietario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8623,11 +8623,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Propietario\\Documents\\ProyectoGrupo61\\Aplicacion\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Propietario\\Documents\\RepoGit\\ProyectoExito\\Aplicacion\\Persistencia\\Persistencia.csproj"
             }
           }
         }

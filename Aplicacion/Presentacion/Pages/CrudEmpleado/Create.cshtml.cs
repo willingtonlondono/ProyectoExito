@@ -14,6 +14,8 @@ namespace Presentacion.Pages.CrudEmpleado
     {
         private readonly Persistencia.Conexion _context;
 
+        public SelectList SucursalesFront;
+
         public CreateModel(Persistencia.Conexion context)
         {
             _context = context;
@@ -21,6 +23,8 @@ namespace Presentacion.Pages.CrudEmpleado
 
         public IActionResult OnGet()
         {
+            List<Sucursal> listaSucursales = _context.Sucursal.ToList();
+            SucursalesFront = new SelectList(listaSucursales, nameof(Sucursal.Id), nameof(Sucursal.Nombre));
             return Page();
         }
 
@@ -37,7 +41,6 @@ namespace Presentacion.Pages.CrudEmpleado
             {
                 return Page();
             }
-
             _context.Empleados.Add(Empleado);
             await _context.SaveChangesAsync();
 
