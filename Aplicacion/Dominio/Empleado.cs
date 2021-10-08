@@ -17,5 +17,6 @@ namespace Dominio
         public string password {get; set;}
         public bool accesoReportes {get; set;}
         public Sucursal Sucursal {get; set;}
+        public bool PrimerIngreso {get; set;}
     }
 }

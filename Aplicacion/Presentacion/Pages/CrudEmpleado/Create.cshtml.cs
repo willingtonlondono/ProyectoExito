@@ -42,6 +42,8 @@ namespace Presentacion.Pages.CrudEmpleado
             {
                 return Page();
             }
+            Empleado.PrimerIngreso = true;
+            Empleado.password = Empleado.Cedula;
             _context.Empleados.Add(Empleado);
             await _context.SaveChangesAsync();
 
