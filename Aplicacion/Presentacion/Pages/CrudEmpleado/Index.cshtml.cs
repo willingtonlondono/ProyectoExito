@@ -23,7 +23,7 @@ namespace Presentacion.Pages.CrudEmpleado
 
         public async Task OnGetAsync()
         {
-            Empleado = await _context.Empleados.ToListAsync();
+            Empleado = await _context.Empleados.Include(s => s.Sucursal).ToListAsync();
         }
     }
 }

@@ -15,7 +15,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Consola[0].Nombre)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NombreSort">
+                    @Html.DisplayNameFor(model => model.Consola[0].Nombre)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Consola[0].Version)

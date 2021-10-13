@@ -16,6 +16,10 @@ namespace Presentacion.Pages.CrudEmpleado
 
         public SelectList SucursalesFront;
 
+        public int SucursalId {get; set;}
+
+        public string usuarioCreado {get; set;}
+
         public CreateModel(Persistencia.Conexion context)
         {
             _context = context;
@@ -32,8 +36,6 @@ namespace Presentacion.Pages.CrudEmpleado
         [BindProperty]
         public Empleado Empleado { get; set; }
 
-        public NombreRol NombreRol { get; set; }
-
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
@@ -42,12 +44,19 @@ namespace Presentacion.Pages.CrudEmpleado
             {
                 return Page();
             }
-            Empleado.PrimerIngreso = true;
-            Empleado.password = Empleado.Cedula;
-            _context.Empleados.Add(Empleado);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+            Empleado verificarUsuario = _context.Empleados.FirstOrDefault(e => e.usuario == Empleado.usuario);
+            if(verificarUsuario != null){
+                usuarioCreado = "El nombre de usuario ya esta en uso";
+                return Page();
+            }else{
+                Sucursal sucursal = _context.Sucursal.FirstOrDefault(s => s.Id == SucursalId);
+                Empleado.Sucursal = sucursal;
+                Empleado.PrimerIngreso = true;
+                Empleado.password = Empleado.Cedula;
+                _context.Empleados.Add(Empleado);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
         }
     }
 }

@@ -27,18 +27,19 @@ namespace Presentacion.Pages
         {
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             Conexion conn = new Conexion();
             var Username = HttpContext.Session.GetString("username");
-            HttpContext.Session.Remove("username");
             Empleado empleado = conn.Empleados.FirstOrDefault(e => e.usuario == Username);
             if(!Password.Equals(RepeatPassword)){
                 MensajePassword = "Las contraseñas no coinciden";
+                return Page();
             }else{
                 empleado.password = Password;
                 empleado.PrimerIngreso = false;
                 conn.SaveChanges();
+                return RedirectToPage("../Index");
             }
         }
     }

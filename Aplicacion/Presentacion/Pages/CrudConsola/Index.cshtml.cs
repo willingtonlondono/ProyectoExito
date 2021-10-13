@@ -12,6 +12,9 @@ namespace Presentacion.Pages.CrudConsola
 {
     public class IndexModel : PageModel
     {
+
+        public String NombreSort {get; set;}
+
         private readonly Persistencia.Conexion _context;
 
         public IndexModel(Persistencia.Conexion context)
@@ -21,9 +24,14 @@ namespace Presentacion.Pages.CrudConsola
 
         public IList<Consola> Consola { get;set; }
 
-        public async Task OnGetAsync()
+        public void OnGet(string sortOrder)
         {
-            Consola = await _context.Consolas.ToListAsync();
+            NombreSort = String.IsNullOrEmpty(sortOrder) ? "nombre_sort": "";
+            var consoleOrder = _context.Consolas.ToList();
+            if(NombreSort != null || NombreSort.Equals("")){
+                consoleOrder.OrderBy(c => c.Nombre);
+            }
+            Consola =  consoleOrder.ToList();
         }
     }
 }

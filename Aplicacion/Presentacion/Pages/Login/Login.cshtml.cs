@@ -45,21 +45,21 @@ namespace Presentacion.Pages
         public IActionResult OnPost(){
             Conexion conexion = new Conexion();
             Empleado empleado = conexion.Empleados.FirstOrDefault(e => e.usuario == Usuario);
-            
             if(empleado != null){
                 if(empleado.PrimerIngreso && empleado.password.Equals(empleado.Cedula)){
                     HttpContext.Session.SetString("username", Usuario);
+                    Console.WriteLine(empleado.PrimerIngreso);
                     return RedirectToPage("../CambiarContrasena/CambiarContrasena");
                 }
                 if(empleado.password.Equals(Contrasena)){
-                    HttpContext.Session.SetString("usuarioAutenticado", "El usuario esta Autenticado");
+                    HttpContext.Session.SetString("usuarioAutenticado", empleado.NombreRol.ToString());
                     switch(empleado.NombreRol){
                         case NombreRol.ADMINISTRADOR_COMPRAS:
                             return RedirectToPage("../CrudConsola/Index");
                         case NombreRol.ADMINISTRADOR_VENTAS:
                             return RedirectToPage("../CrudConsola/Index");
                         case NombreRol.ADMINISTRADOR_SISTEMA:
-                            return RedirectToPage("../CrudConsola/Index");
+                            return RedirectToPage("../CrudEmpleado/Index");
                         case NombreRol.VENDEDOR:
                             return RedirectToPage("../CrudConsola/Index");
                         case NombreRol.USUARIO:
