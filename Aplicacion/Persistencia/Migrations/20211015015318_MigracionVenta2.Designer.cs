@@ -3,21 +3,59 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistencia;
 
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(Conexion))]
-    partial class ConexionModelSnapshot : ModelSnapshot
+    [Migration("20211015015318_MigracionVenta2")]
+    partial class MigracionVenta2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("Dominio.Consola", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Almacenamiento")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Fabricante")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
+
+                    b.Property<int>("TipoAlmacenamiento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VelocidadProcesador")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VelocidadRam")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Version")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Consolas");
+                });
 
             modelBuilder.Entity("Dominio.Empleado", b =>
                 {
@@ -82,10 +120,6 @@ namespace Persistencia.Migrations
                     b.Property<string>("CodigoProducto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int?>("EmpleadoId")
                         .HasColumnType("int");
 
@@ -95,16 +129,11 @@ namespace Persistencia.Migrations
                     b.Property<double>("PrecioVenta")
                         .HasColumnType("float");
 
-                    b.Property<bool>("vendido")
-                        .HasColumnType("bit");
-
                     b.HasKey("Id");
 
                     b.HasIndex("EmpleadoId");
 
                     b.ToTable("Productos");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Producto");
                 });
 
             modelBuilder.Entity("Dominio.Sucursal", b =>
@@ -161,37 +190,6 @@ namespace Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Usuario");
-                });
-
-            modelBuilder.Entity("Dominio.Consola", b =>
-                {
-                    b.HasBaseType("Dominio.Producto");
-
-                    b.Property<int>("Almacenamiento")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Fabricante")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Precio")
-                        .HasColumnType("float");
-
-                    b.Property<int>("TipoAlmacenamiento")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VelocidadProcesador")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VelocidadRam")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Version")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Consola");
                 });
 
             modelBuilder.Entity("Dominio.Empleado", b =>

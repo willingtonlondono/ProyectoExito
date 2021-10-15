@@ -15,6 +15,10 @@ namespace Presentacion.Pages.CrudConsola
 
         public String NombreSort {get; set;}
 
+        public String VersionSort {get; set;}
+
+        public String Busqueda {get; set;}
+
         private readonly Persistencia.Conexion _context;
 
         public IndexModel(Persistencia.Conexion context)
@@ -24,14 +28,25 @@ namespace Presentacion.Pages.CrudConsola
 
         public IList<Consola> Consola { get;set; }
 
-        public void OnGet(string sortOrder)
+        public void OnGet(string sortOrder, string Busqueda)
         {
             NombreSort = String.IsNullOrEmpty(sortOrder) ? "nombre_sort": "";
-            var consoleOrder = _context.Consolas.ToList();
-            if(NombreSort != null || NombreSort.Equals("")){
-                consoleOrder.OrderBy(c => c.Nombre);
+            VersionSort = String.IsNullOrEmpty(sortOrder) ? "version_sort": "";
+            List<Consola> consoleOrder = _context.Consolas.ToList();
+
+            if(!String.IsNullOrEmpty(Busqueda)){
+                consoleOrder = _context.Consolas.Where(c => c.Nombre == Busqueda).ToList();
             }
-            Consola =  consoleOrder.ToList();
+            
+            if(NombreSort != null && NombreSort.Equals("nombre_sort")){
+                consoleOrder =  consoleOrder.OrderBy(c => c.Nombre).ToList();
+            }else if(VersionSort != null && VersionSort.Equals("version_sort")){
+                consoleOrder =  consoleOrder.OrderBy(c => c.Version).ToList();
+            }else{
+                consoleOrder =  consoleOrder.ToList();
+            } 
+            Consola = consoleOrder.ToList();    
+           
         }
     }
 }

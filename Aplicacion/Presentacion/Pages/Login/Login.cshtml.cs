@@ -61,7 +61,7 @@ namespace Presentacion.Pages
                         case NombreRol.ADMINISTRADOR_SISTEMA:
                             return RedirectToPage("../CrudEmpleado/Index");
                         case NombreRol.VENDEDOR:
-                            return RedirectToPage("../CrudConsola/Index");
+                            return RedirectToPage("../CrudVenta/RegistroVenta");
                         case NombreRol.USUARIO:
                             return RedirectToPage("../CrudConsola/Index");
                         default:

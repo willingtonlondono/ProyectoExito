@@ -12,6 +12,8 @@ namespace Persistencia
         public DbSet<Usuario> Usuarios { get; set; }
 
         public DbSet<Sucursal> Sucursal { get; set; }
+        public DbSet<Venta> Ventas { get; set; }
+        public DbSet<Producto> Productos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder conn)
         {

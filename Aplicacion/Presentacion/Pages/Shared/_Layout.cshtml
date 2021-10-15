@@ -43,6 +43,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar Sesión</a>
                         </li>
+                    }else if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
+                    && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("VENDEDOR")){
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudVenta/RegistroVenta">Registrar Venta</a>
+                        </li>
                     }
                     </ul>
                 </div>

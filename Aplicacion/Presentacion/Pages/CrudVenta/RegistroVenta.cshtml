@@ -1,0 +1,37 @@
+﻿@page
+@model presentacion.Pages.RegistroVentaModel
+@{}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].CodigoProducto )
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto[0].PrecioVenta )
+            </th>   
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Producto) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioVenta)
+            </td>
+            <td>
+                <form method="post">
+                    <input type="hidden" class="link-button" value="vender" asp-for="@item.Id"/>
+                    <input type="submit" class="link-button" value="vender"/>
+                </form>
+            </td>
+        </tr>
+
+    }
+</tbody>
+</table>
+    

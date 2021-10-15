@@ -9,8 +9,12 @@
 
 <p>
     <a asp-page="Create">Create New</a>
-    <img src="/images/descarga.jpg"></img>
 </p>
+<form asp-page="./Index" method="get">
+    <label>Busqueda por nombre:</label>
+    <input type="text" name="Busqueda" value="@Model.Busqueda" />
+    <input type="submit" value="Buscar" class="btn btn-primary"/>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -20,7 +24,9 @@
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Consola[0].Version)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.VersionSort">
+                    @Html.DisplayNameFor(model => model.Consola[0].Version)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Consola[0].Fabricante)
