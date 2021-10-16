@@ -1,6 +1,6 @@
 namespace Dominio
 {
-    public class Consola : Producto
+    public class Consola
     {
 
         public string Nombre {get; set;}

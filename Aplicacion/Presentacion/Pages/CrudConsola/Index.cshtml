@@ -11,9 +11,15 @@
     <a asp-page="Create">Create New</a>
 </p>
 <form asp-page="./Index" method="get">
+    <div class="form-group">
+        <label>Busqueda por nombre:</label>
+        <input type="text" name="Busqueda" value="@Model.Busqueda" />
+    </div>
+    <div class="form-group">   
     <label>Busqueda por nombre:</label>
-    <input type="text" name="Busqueda" value="@Model.Busqueda" />
-    <input type="submit" value="Buscar" class="btn btn-primary"/>
+        <input type="text" name="Busqueda" value="@Model.Busqueda" />
+        <input type="submit" value="Buscar" class="btn btn-primary"/>
+    </div>
 </form>
 <table class="table">
     <thead>

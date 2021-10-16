@@ -6,7 +6,7 @@ namespace Dominio
 
         public string NumeroFactura {get;set;}
 
-        public  Producto Producto {get;set;}
+        public Producto Producto {get;set;}
     
         public int CantidadProducto {get;set;}
 

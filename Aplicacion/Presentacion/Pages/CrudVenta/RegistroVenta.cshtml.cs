@@ -16,7 +16,9 @@ namespace presentacion.Pages
         [BindProperty]
         public List<Producto> Producto {get; set;}
 
-        public Producto ProductoID {get; set;}
+        [BindProperty]
+        public int Cantidad {get; set;}
+      
         Conexion conexion = new Conexion();
 
 
@@ -25,14 +27,20 @@ namespace presentacion.Pages
             Producto = conexion.Productos.ToList();
         }
 
-        public void OnPost(int id){
-            Console.WriteLine(id);
-            //string username =  HttpContext.Session.GetString("username");
-            //Empleado e = conexion.Empleados.FirstOrDefault(e => e.usuario == username);
-            //var productoVendido = conexion.Productos.FirstOrDefault(p => p.Id == id);
-            //productoVendido.vendido = true;
-            //productoVendido.Empleado = e;
-            //conexion.SaveChanges();
+        public RedirectToPageResult OnPostVender(int id){
+            string username =  HttpContext.Session.GetString("username");
+            Empleado e = conexion.Empleados.FirstOrDefault(e => e.usuario == username);
+            var productoVendido = conexion.Productos.FirstOrDefault(p => p.Id == id);
+            productoVendido.vendido = true;
+            productoVendido.Empleado = e;
+            conexion.SaveChanges();
+            Venta venta = new Venta();
+            venta.Producto = productoVendido;
+            venta.CantidadProducto = Cantidad;
+            venta.TotalVenta = productoVendido.PrecioVenta * Cantidad;
+            venta.Empleado = e;
+            conexion.SaveChanges();
+            return RedirectToPage("./RegistroVenta");
         }
     }
 }
